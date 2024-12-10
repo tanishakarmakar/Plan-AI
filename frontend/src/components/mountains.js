@@ -120,7 +120,7 @@ const HistoricalPlaces = () => {
       <div className='data-container' style={{ marginBottom: '40px' }}>{data}</div> {/* Display the formatted historical places data */}
 
       {/* Input Form for Trip Details */}
-      <div style={{ marginTop: '20px', border: '1px solid #ccc', padding: '20px', borderRadius: '10px', backgroundColor: '#ffa2b6', fontFamily: '"Raleway", sans-serif', fontSize: '22px' }}>
+      <div style={{ marginTop: '20px', border: '1px solid #ccc', padding: '20px', borderRadius: '10px', backgroundColor: '#ffffff', fontFamily: 'Montserrat, sans-serif', fontSize: '16px' }}>
         <h2 style={{ textAlign: 'center', marginBottom: '20px', color: '#E43D12'}}>Plan Your Trip with Arya!</h2>
 
         <div style={{ marginBottom: '15px' }}>
@@ -413,7 +413,7 @@ const HistoricalPlaces = () => {
 
       {/* Display Trip Plan */}
       {tripPlan && (
-        <div style={{ marginTop: '30px', padding: '20px', border: '1px solid #ccc', borderRadius: '10px', backgroundColor: '#f9f9f9', fontFamily: '"Raleway", sans-serif', fontSize: '22px' }}>
+        <div style={{ marginTop: '30px', padding: '20px', border: '1px solid #ccc', borderRadius: '10px', backgroundColor: '#f9f9f9', fontFamily:'Montserrat, sans-serif', fontSize: '16px' }}>
           <h2 style={{ textAlign: 'center' }}>Your Personalised Trip Plan:</h2>
           <div style={{ whiteSpace: 'pre-line' }}>{tripPlan}</div> {/* Preserves line breaks */}
         </div>

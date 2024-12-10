@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import axios from '../api/axios';
+import axios from 'axios';
 import { setUser, setToken } from '../redux/slices/userSlice';
 import { useNavigate, Link } from 'react-router-dom';
 
@@ -15,7 +15,7 @@ function Login() {
     e.preventDefault();
   
     try {
-      const response = await axios.post('/login', { email, password });
+      const response = await axios.post('http://localhost:5000/login', { email, password });
       
       // Dispatch user and token to Redux store
       dispatch(setUser(response.data.user));
@@ -41,6 +41,7 @@ function Login() {
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          
         />
         <input
           type="password"

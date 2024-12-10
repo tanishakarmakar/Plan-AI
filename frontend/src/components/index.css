@@ -1,345 +1,222 @@
 /* Global Styling */
 body {
-  font-family: 'Open Sans', sans-serif; /* Font from Google Fonts */
-  
+  font-family: 'Montserrat', sans-serif; /* Clean, modern sans-serif font for readability */
+  background-color: #ffffff; /* Muted beige-grey background */
+  color: #333; /* Muted dark grey text for balance */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6; /* Improved readability */
 }
 
-h1{
-  font-family: 'Arial', sans-serif;  /* Change this to any font you prefer */
-font-size: 4rem;  /* Adjust the size of the heading */
-font-weight: bold;  /* Optional: make the font bold */
-color: #ff7d27;  /* Change the text color (white in this case) */
-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  /* Add text shadow for better readability */
-text-align: center;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', serif; /* Elegant serif font for headings */
+  color: #000000; /* Muted dark grey for headings */
+  margin: 0 0 1rem 0; /* Add consistent spacing below headings */
+}
+
+h1 {
+  font-size: 2rem; /* Large, bold headlines */
+  font-weight: bold;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5rem; /* Slightly smaller for subheadings */
+  font-weight: bold;
+}
+
+p {
+  font-size: 1rem; /* Standardize paragraph text size */
+  line-height: 1.6; /* Improve readability */
+  margin-bottom: 1rem; /* Space between paragraphs */
+  color: #000000; /* Softer grey for paragraph text */
+}
+
+/* Containers */
+.home-background, .login-background, .service-content {
+  background-color:#ffffff; /* Light muted grey for sections */
+  text-align: center;
+  height: 100vh; /* Full screen height */
+  display: flex; /* Use flexbox for centering */
+  border-radius: 8px; /* Rounded corners for softer look */
+  padding: 2rem 1rem;
+
+  border-radius: 8px; /* Rounded corners for softer look */
+}
+em {
+  font-size: 1.2rem; /* Slightly larger text for emphasis */
+  color: #555; /* Subtle color */
+  margin-bottom: 2rem; /* Space below the subtitle */
+  display: block; /* Ensure spacing applies */
+}
+
+.home-container, .login-container, .service-content {
+  max-width: 800px; /* Center content and control width */
+  margin: 0 auto; /* Center align the containers */
+  min-height: 100vh; /* Ensure content isn't clipped */
+  height: auto; /* Adjust if content overflows */
+  min-height: 100vh; /* Ensures section grows with content */
+  display: flex; 
+  flex-direction: column; /* Stacks children vertically */
+  justify-content: center; /* Centers content vertically */
+  align-items: center; /* Centers content horizontally */
+  text-align: center;
+  padding: 2rem 1rem; /* Add space inside */
+  overflow: visible; /* Prevents content clipping */
+  box-sizing: border-box; /* Includes padding in size calculation */
 
 }
 
+/* Inputs & Forms */
 form {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  padding: 2rem;
-  
+  padding: 1rem;
+  max-width: 400px; /* Consistent form size */
+}
+
+input, button {
+  font-family: 'Open Sans', sans-serif;
 }
 
 input {
   padding: 10px;
   margin: 10px 0;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 16px;
+  border: 1px solid #ccc;
+  background-color:white; /* New button background color */
+  color:black;
+  border-radius: 4px; /* Rounded inputs for modern look */
+  font-size: 1rem;
 }
 
 input:focus {
   outline: none;
-  border-color: #007bff;
+  border-color: #888; /* Softer focus effect */
+}
+.button-container {
+  display: flex; /* Use flexbox for button alignment */
+  justify-content: center; /* Center the buttons */
+  gap: 30px; /* Space between the buttons */
+  margin-top: 20px; /* Space above the buttons */
 }
 
 button {
-  padding: 10px;
-  margin-top: 20px;
-  background-color: #007bff;
-  color: white;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  padding: 12px 25px;; /* Add padding for a better button size */
+  font-size: 1rem; /* Adjust font size */
+  border-radius: 5px; /* Rounded corners */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Pointer cursor for buttons */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+  width: 45%;
 }
 
-
-p {
-
-  margin-top: 22px;
-  color: #666;
+button:hover {
+  background-color:black; /* Slightly darker on hover */
 }
 
-
-
-/* HomePage Specific */
-.home-background {
-  background-image: url('1st-section.jpg'); /* Replace with your image path */
-  background-size: cover; /* Cover the entire background */
-  background-position: center; /* Center the background image */
-  height: 100vh; /* Full height of the viewport */
-  display: flex; /* Center content horizontally and vertically */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+/* Historical Background */
+.historicalbg {
+  margin-top: 0; /* Removes top margin */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; 
+  background-color: #f0ece3; /* Muted beige background */
+  color: #333; /* Darker text for contrast */
+  padding: 1rem;
+  border-radius: 8px; /* Rounded edges for consistency */
+  margin: 0;
 }
 
-/* Home Container */
-.home-container {
-  text-align: center;
-  padding: 40px;
-  margin-top: 20px;
-  
+.historicalbg h1, .historicalbg h2 {
+  color: #4a4a4a; /* Maintain muted grey for headings */
 }
 
-.home-container h1 {
-  margin-top: 0px;
-  font-size: 128px;
-  color: #fff;
-  font-weight: 900;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 0px;
-}
-
-.home-container em {
-  color: #ff7d27;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 25px;
-}
-
-/*Login/Register Styles */
-
-.login-background {
-  background-image: url('2nd-section.jpg'); /* Replace with your image path */
-  background-size: cover; /* Cover the entire background */
-  background-position: center; /* Center the background image */
-  height: 100vh; /* Full height of the viewport */
-  display: flex; /* Center content horizontally and vertically */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-}
-
-/* Home Container */
-.login-container {
-  text-align: center;
-  padding: 40px;
-  margin-top: 20px;
-  
-}
-
-.login-container h1 {
-  margin-top: 0px;
-  font-size: 55px;
-  color: #fff;
-  font-weight: 900;
-  text-transform: uppercase;
-  margin-bottom: 0px;
-}
-
-.login-container p {
-  color: #ff7d27;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 25px;
-}
-
-.text-link {
-  color: inherit;  /* Inherit the color from the parent element */
-  text-decoration: underline;  /* Add underline to make it look like a link */
-}
-
-.text-link:hover {
-  color: #f56c3a;  /* Ensure the color does not change on hover */
-  text-decoration: underline;  /* Ensure underline remains on hover */
-}
-/* Button Styles */
-.button-container {
-  margin-top: 20px;
-}
-
-.login-button,
-.register-button {
-  background-color: initial;
-  background-image: linear-gradient(-180deg, #bd4114, #ff7d27);
+/* Data Container */
+.data-container {
+  background-color: #fff; /* Clean white background */
+  padding: 1.5rem;
   border-radius: 6px;
-  width: 150px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
-  height: 40px;
-  line-height: 40px;
-  outline: 0;
-  overflow: hidden;
-  padding: 0 20px;
-  pointer-events: auto;
-  position: relative;
-  text-align: center;
-  touch-action: manipulation;
-  user-select: none;
-  -webkit-user-select: none;
-  vertical-align: top;
-  white-space: nowrap;
-  font-size: large;
-  font-weight: bold;
-  z-index: 9;
-  border: 0;
-  transition: box-shadow .2s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin-bottom: 2rem; /* Add space between sections */
 }
 
-.login-button:hover,
-.register-button:hover {
-  box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
-  /* Darker shade on hover */
+.data-container p {
+  color: #555; /* Softer grey text */
 }
 
+/* Carousel */
 .carousel-item {
-  height: 500px; /* Set the height of the carousel */
+  height: 100vh;
+  margin-top: 0; /* Remove any default top margin */
+  padding-top: 0;
+  object-fit: cover; /* Ensures the image covers the entire area without distortion */
+
+  background-color: #eaeaea; /* Neutral background */
 }
 
 .carousel-item img {
-  object-fit: cover; /* Ensure images cover the entire carousel */
-  height: 100%; /* Make the image take up the full height of the carousel */
-  width: 90%; /* Ensure the image also takes up the full width */
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px; /* Match rounded styles */
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-  height: 80%; /* Match the height of the controls to the carousel */
-  align-items: center; /* Vertically center the control buttons */
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  height: 50px; /* Set a height for the control icons */
-  width: 50px; /* Set a width for the control icons */
-}
-
-/* Custom styles for carousel captions */
 .carousel-caption h5 {
-font-family: 'Arial', sans-serif;  /* Change this to any font you prefer */
-font-size: 5rem;  /* Adjust the size of the heading */
-font-weight: bold;  /* Optional: make the font bold */
-color: #fff;  /* Change the text color (white in this case) */
-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  /* Add text shadow for better readability */
+  font-family: 'Montserrat', serif;
+  font-size: 1rem; /* Smaller size for headings */
+  color: #ffffff;
 }
 
 .carousel-caption p {
-font-family: 'Georgia', serif;  /* Change this to your preferred font */
-font-size: 1.25rem;  /* Adjust the size of the paragraph */
-font-weight: normal;  /* Set the font weight */
-color: #e3f707;  /* Optional: set the color of the paragraph text */
-text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);  /* Optional: text shadow for contrast */
-}
+  color: #ffffff; /* Muted grey text */
+    font-size: 0.85rem; /* Smaller size for paragraph text */
+  }
 
-.service-content {
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 15vh;
-  background-image: url(2nd-section.jpg);
-  background-attachment: fixed;
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center center;
-}
 
-.service-content h1 {
-  margin-top: 0px;
-  font-size: 50px;
-  color: #fff;
-  font-weight: 900;
-  text-transform: uppercase;
-  margin-bottom: 0px;
-}
-.service-content p{
-  font-size: 15px;
-  font-weight: 500;
-  color: #fff;
-}
-
-.container{
-  text-align: left;
-}
-.service-content .left-text h4 {
-  font-size: 24px;
-  font-weight: 500;
-  color: #fff;
-}
-
-h4, .h4 {
-  font-size: 18px;
-}
-
-.service-content .left-text .line-dec {
-  width: 45px;
-  height: 3px;
-  background-color: #ff7d27;
-  margin: 20px 0px 20px 0px;
-}
-
-.service-content .left-text p {
-  color: #fff;
-}
-
-.service-content .left-text ul {
-  padding: 0;
-  margin-top: 30px;
-  list-style: none;
-}
-
-.service-content .left-text ul li {
-  margin: 15px 0px;
-  font-weight: 600;
-  color: #fff;
-}
-
-.service-content .left-text .primary-button {
-  margin: 30px 0px;
-}
-
-.service-content .service-item {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 25px 30px;
-  text-align: center;
-  color: #fff;
-  margin-bottom: 30px;
-}
-
-.service-content .service-item .line-dec {
-  width: 45px;
-  height: 3px;
-  background-color: #ff7d27;
-  margin: 20px auto 15px auto;
-}
-
-.started {
-  border-radius: 4px;
-  background-color: #f4511e;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 25px;
-  padding: 20px;
-  width: 200px;
-  transition: all 0.5s;
+/* Buttons */
+.started, .generate {
+  background-color: #000000; /* Muted beige for buttons */
+  border: 2px solid #b8b6af; /* Subtle border for contrast */
+  color: #ffffff; /* White text */; /* Muted text color */
+  padding: 10px 20px; /* Balanced button size */
+  font-size: 1rem; /* Readable font size */
+  border-radius: 6px; /* Slightly rounded corners for a modern look */
   cursor: pointer;
-  margin: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition effects */
 }
 
-.started span {
-  
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
+.started:hover, .generate:hover {
+  background-color: #b8b6af; /* Slightly darker beige */
+  color: #333; /* Darker text color on hover */
+  border-color: #a6a4a0; /* Softer hover border */
 }
 
-.started span:after {
-  
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
+/* Update Global Form Buttons (if any) */
+button {
+  background-color: grey; /* Default muted beige */
+  color: white;
 }
 
-.started:hover span {
-  background-color: #f4511e;
-  padding-right: 25px;
+button:hover {
+  background-color: #000000; /* Hover matches `.generate` */
 }
 
-.started:hover span:after {
-  background-color: #f4511e;
-  opacity: 1;
-  right: 0;
+/* Remove Unintended Overrides */
+.generate {
+  background-color: #d1cfc7 !important; /* Enforce muted beige */
+  color: #4a4a4a !important; /* Enforce text color */
 }
 
+/* Links */
+.text-link {
+  color: black;
+  text-decoration: none; /* Remove underline by default */
+}
+
+.text-link:hover {
+  color: black; /* Darker on hover */
+}
 .loadingerror{
   display: flex;
   justify-content: center;
@@ -605,56 +482,3 @@ h4, .h4 {
   filter: drop-shadow(0 0 10px #fffdef);
   z-index: 2;
 }
-
-.fil0 {
-  fill: #fffdef;
-}
-
-.historicalbg{
-  background-color: #ebe9e1;
-  color: #0e0d0c;
-  width: 100%; 
-}
-
-.historicalbg h1{
-  font-family: 'Arial', sans-serif;  /* Change this to any font you prefer */
-font-size: 5rem;  /* Adjust the size of the heading */
-font-weight: bold;  /* Optional: make the font bold */
-color: #E43D12;  /* Change the text color (white in this case) */
-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  /* Add text shadow for better readability */
-
-}
-
-.historicalbg h2{
-  font-family: 'Arial', sans-serif;  /* Change this to any font you prefer */
-font-size: 3.5rem;  /* Adjust the size of the heading */
-font-weight: bold;  /* Optional: make the font bold */
-color: #E43D12;  /* Change the text color (white in this case) */
-
-
-}
-
-/* HistoricalPlaces.css */
-.data-container {
-  background-color: #f6d589; /* Light background for contrast */
-  padding: 20px; /* Padding around the content */
-  border-radius: 8px; /* Rounded corners for a modern look */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  font-size: 20px;
-  width: 100%; 
-  font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  color: #000000; /* Dark color for text */
-  margin-bottom: 40px; /* Space below the container */
-  line-height: 1.6; /* Improve text readability */
-  text-align: justify; /* Justify the text for a neat appearance */
-}
-
-
-
-
-
-
-
-

@@ -44,10 +44,10 @@ const HistoricalPlaces = () => {
 
   // Function to format the response
   const formatResponse = (response) => {
-    // Replace markdown-like bold syntax (**) with <strong> tags for proper rendering
+    // Replace markdown-like bold syntax () with <strong> tags for proper rendering
     const formattedResponse = response
-      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // Converts **bold text** to <strong>bold text</strong>
-      .replace(/\*(.*?)\*/g, '<em>$1</em>'); // Optionally converts *italic text* to <em>italic text</em>
+      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // Converts **bold text* to <strong>bold text</strong>
+      .replace(/\*(.*?)\*\*/g, '<em>$1</em>'); // Optionally converts *italic text to <em>italic text</em>
   
     // Split the response into lines
     const lines = formattedResponse.split('\n');
@@ -79,13 +79,13 @@ const HistoricalPlaces = () => {
             role: 'user',
             content: `Plan a day-wise trip from ${placefrom} to the historical sites in ${placeto} with a budget of ${budget}, for ${days} days, for ${people} people. Make the trip affordable according to budget as much as possible. Divide the entire below trip in ${days} days iterenary:
 
-                      **Preferred Transportation:** ${transportation}. Give me transportation for both sides. If the transportation is Taxi/Self Driving, recommend the car model according to the number of people provided. For example, if it's 2-4 people, a 4-seater cab would do. If it's 5+ people, recommend a bigger, more spacious car and provide the correct rates.
+                      *Preferred Transportation:* ${transportation}. Give me transportation for both sides. If the transportation is Taxi/Self Driving, recommend the car model according to the number of people provided. For example, if it's 2-4 people, a 4-seater cab would do. If it's 5+ people, recommend a bigger, more spacious car and provide the correct rates.
 
-                      **Room Type:** ${roomType}. One single shared room can accommodate up to 3 people max, a private room can accommodate 1 person max, and an entire room (suite) can accommodate a group of 6-8 people. Allocate the number of rooms needed according to the choice of the traveler among the 3 options and cost accordingly. Also, provide the name of the most suitable stay/hotel option. Tell if the hotel has included breakfast or not
+                      *Room Type:* ${roomType}. One single shared room can accommodate up to 3 people max, a private room can accommodate 1 person max, and an entire room (suite) can accommodate a group of 6-8 people. Allocate the number of rooms needed according to the choice of the traveler among the 3 options and cost accordingly. Also, provide the name of the most suitable stay/hotel option. Tell if the hotel has included breakfast or not
 
-                      **Room Rules:** ${roomRules.join(', ')}. 
+                      *Room Rules:* ${roomRules.join(', ')}. 
 
-                      **Preferred Cuisines:** ${cuisines.join(', ')}. Write names of food places where they can get their preferred cuisines. Also, recommend trying the place's famous cuisine apart from their preferred food. Food costs should be estimated correctly and do not make it very pricey, based on the dining location and the number of people for different sets of meals-starting from breakfast(if hotel has already provided breakfast no need to mention it), then lunch, evening snacks, followed by drinks and dinner).
+                      *Preferred Cuisines:* ${cuisines.join(', ')}. Write names of food places where they can get their preferred cuisines. Also, recommend trying the place's famous cuisine apart from their preferred food. Food costs should be estimated correctly and do not make it very pricey, based on the dining location and the number of people for different sets of meals-starting from breakfast(if hotel has already provided breakfast no need to mention it), then lunch, evening snacks, followed by drinks and dinner).
 
                       Ensure to avoid conflicts in transportation, meet minimum stay requirements for accommodations, and offer diverse restaurants and attractions.
 
@@ -116,13 +116,21 @@ const HistoricalPlaces = () => {
 
   return (
     <div className='historicalbg' >
+      
     <div style={{ margin: '0 auto', padding: '20px', maxWidth: '1000px' }}>
+
+    
+  {/* Rest of your component */}
+</div>
+
+    <div style={{ margin: '0 auto', padding: '20px', maxWidth: '1000px',marginTop: '0' }}>
       <h1 >HISTORICAL PLACES</h1>
       <div className='data-container' style={{ marginBottom: '40px' }}>{data}</div> {/* Display the formatted historical places data */}
 
       {/* Input Form for Trip Details */}
-      <div style={{ marginTop: '20px', border: '1px solid #ccc', padding: '20px', borderRadius: '10px', backgroundColor: '#ffa2b6', fontFamily: '"Raleway", sans-serif', fontSize: '22px' }}>
-        <h2 style={{ textAlign: 'center', marginBottom: '20px', color: '#E43D12'}}>Plan Your Trip with Arya!</h2>
+     
+        </div><div style={{ marginTop: '20px', border: '1px solid #ccc', padding: '20px', borderRadius: '10px', backgroundColor: '#ffffff', fontFamily: 'Montserrat, sans-serif', fontSize: '16px' }}>
+        <h2 style={{ textAlign: 'center', marginBottom: '20px', color: '#ff0000'}}>Plan Your Trip with Arya!</h2>
 
         <div style={{ marginBottom: '15px' }}>
           <label>You are travelling from: </label>
@@ -131,7 +139,7 @@ const HistoricalPlaces = () => {
             value={placefrom} 
             onChange={(e) => setPlacefrom(e.target.value)} 
             placeholder="Enter your current location" 
-            style={{ width: '100%', padding: '10px', marginTop: '5px', borderRadius: '5px', border: '1px solid #ccc' }}
+            style={{ width: '100%', padding: '20px', marginTop: '5px', borderRadius: '5px', border: '1px solid #ccc' }}
           />
         </div>
 
@@ -414,13 +422,14 @@ const HistoricalPlaces = () => {
 
       {/* Display Trip Plan */}
       {tripPlan && (
-        <div style={{ marginTop: '30px', padding: '20px', border: '1px solid #ccc', borderRadius: '10px', backgroundColor: '#f9f9f9', fontFamily: '"Raleway", sans-serif', fontSize: '22px' }}>
+        <div style={{ marginTop: '30px', padding: '20px', border: '1px solid #ccc', borderRadius: '10px', backgroundColor: '#f9f9f9', fontFamily:'Montserrat, sans-serif', fontSize: '16px' }}>
           <h2 style={{ textAlign: 'center' }}>Your Personalised Trip Plan:</h2>
           <div style={{ whiteSpace: 'pre-line' }}>{tripPlan}</div> {/* Preserves line breaks */}
         </div>
       )}
     </div>
-    </div>
+  
+  
   );
 };
 

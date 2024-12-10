@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'https://slimy-laura-tanishaaa-5e3fea55.koyeb.app'  //http://localhost:5000 for local backend deployment
+  baseURL: 'http://localhost:5000'  //http://localhost:5000 for local backend deployment
 });
 
 instance.interceptors.request.use(

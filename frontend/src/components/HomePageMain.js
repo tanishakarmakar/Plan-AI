@@ -23,7 +23,7 @@ const HomePage = () => {
         return;
       }
       try {
-        await axios.get('https://slimy-laura-tanishaaa-5e3fea55.koyeb.app/home', //http://localhost:5000/home for local backend deployment
+        await axios.get('http://localhost:5000/home', //http://localhost:5000/home for local backend deployment
           {
           headers: { Authorization: `Bearer ${token}` }
         });
@@ -65,7 +65,7 @@ const HomePage = () => {
   return (
     <div>
       <br/>
-      <h1>Choose a Travel Destination</h1>
+      <h1>CHOOSE A TRAVEL DESTINATION!</h1>
       
       
       {/* Carousel */}
@@ -104,7 +104,7 @@ const HomePage = () => {
           <div className="carousel-item">
             <img src={wildlife} className="d-block w-100" alt="Fourth Slide" />
             <div className="carousel-caption d-none d-md-block">
-              <center><h5 onClick={handleWildlifeClick} style={{ cursor: 'pointer' }}>Wildlife & Safari 
+              <center><h5 onClick={handleWildlifeClick} style={{ cursor: 'pointer' }}>Wildlife & Safari 
                 <br/>Destinations</h5></center>
               <p>Embark on a Wild Adventure – Explore India's Untamed Safari Wonders!</p>
             </div>
