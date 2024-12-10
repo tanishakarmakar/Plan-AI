@@ -12,6 +12,14 @@ Plan AI is a web application designed to help users plan affordable, detailed, a
 ### Features
 ![Feature Demo](assets/demo2.png)
 
+![Feature Demo](assets/demo3.png)
+
+![Feature Demo](assets/demo4.png)
+
+![Feature Demo](assets/demo5.png)
+
+![Feature Demo](assets/demo6.png)
+
 ---
 
 ## Prerequisites
