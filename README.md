@@ -2,6 +2,17 @@
 
 Plan AI is a web application designed to help users plan affordable, detailed, and customized travel itineraries based on their preferences, budget, and travel requirements.
 
+---
+
+## Demo
+
+### Homepage
+![Homepage Demo](assets/demo1.png)
+
+### Features
+![Feature Demo](assets/demo2.png)
+
+---
 
 ## Prerequisites
 
